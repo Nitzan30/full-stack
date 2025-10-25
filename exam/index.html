@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        padding: 20px;
+      }
+
+      h3 {
+        text-align: center;
+        color: #2c3e50;
+        margin-bottom: 30px;
+      }
+
+      input,
+      select {
+        width: 100%;
+        padding: 12px;
+        margin-bottom: 20px;
+        border: 2px solid #ddd;
+        border-radius: 5px;
+        font-size: 15px;
+      }
+
+      form {
+        background-color: beige;
+        border: 2px solid #ddd;
+        border-radius: 5px;
+        font-size: 20px;
+        padding: 20px;
+        margin-bottom: 30px;
+      }
+
+
+      table {
+        width: 100%;
+        background-color: white;
+        border-collapse: collapse;
+
+      }
+
+
+      td {
+        padding: 15px;
+        text-align: center;
+        color: #2c3e50;
+        border-bottom: 1px solid #ddd;
+      }
+
+
+      img {
+        width: 80px;
+        height: 80px;
+        object-fit: cover;
+        border-radius: 5px;
+      }
+      .delete-btn{
+        
+        color: blue;
+        border-radius: 5px;
+        background-color: burlywood;
+        padding: 8px 15px;
+        color: white;
+        border: none;
+        font-size: 14px;
+      }
+      
+    </style>
+</head>
+<body>
+    <h3>Nitzan Raich 028809937</h3>
+    <h3>Add Product</h3>
+    <form onsubmit="addProduct(event)">
+        <input type="text" id="name" name="name" required placeholder="Product Name">
+        <input type="number" id="price" name="price" required placeholder="Product Price" step="0.01">
+        <select id="productsList" name="category" required>
+              <option value="" disabled selected>Select a category</option>
+              <option>Drinks</option>
+              <option>Meat</option>
+              <option>Dairy</option>
+              <option>Snacks</option>
+              <option>Basic</option>
+        </select>
+        <input type="url" id="urlInput" name="link" required placeholder="https://example.co.il">
+        <button type="submit">Add Product</button>
+    </form>
+    
+    <h3>My Cart</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Product Name</th>
+          <th>Price</th>
+          <th>Category</th>
+          <th>Picture</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="productTableBody">
+        <!-- I will add Products dynamically from the JS file -->
+      </tbody>
+    </table>
+    
+<script src="system.js"></script>  
+</body>
+</html>
